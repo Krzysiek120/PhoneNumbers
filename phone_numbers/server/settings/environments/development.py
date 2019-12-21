@@ -20,6 +20,7 @@ ALLOWED_HOSTS = [
     config('DOMAIN_NAME'),
     'localhost',
     '127.0.0.1',
+    '0.0.0.0',  # noqa: S104
     '[::1]',
 ]
 
@@ -30,8 +31,16 @@ INSTALLED_APPS += (
     'debug_toolbar',
     'nplusone.ext.django',
     'django_migration_linter',
+    'rest_framework',
 )
 
+REST_FRAMEWORK = {
+    # Use Django's standard `django.contrib.auth` permissions,
+    # or allow read-only access for unauthenticated users.
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+    ]
+}
 
 # Static files:
 # https://docs.djangoproject.com/en/2.2/ref/settings/#std:setting-STATICFILES_DIRS
