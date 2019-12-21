@@ -26,6 +26,7 @@ SECRET_KEY = config('DJANGO_SECRET_KEY')
 INSTALLED_APPS: Tuple[str, ...] = (
     # Your apps go here:
     'server.apps.main',
+    'server.apps.phonebook',
 
     # Default django apps:
     'django.contrib.auth',
@@ -51,6 +52,7 @@ INSTALLED_APPS: Tuple[str, ...] = (
 
     # Third party apps
     'django_http_referrer_policy',
+    'rest_framework',
 )
 
 MIDDLEWARE: Tuple[str, ...] = (

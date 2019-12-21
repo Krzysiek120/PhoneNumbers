@@ -31,7 +31,6 @@ INSTALLED_APPS += (
     'debug_toolbar',
     'nplusone.ext.django',
     'django_migration_linter',
-    'rest_framework',
 )
 
 REST_FRAMEWORK = {

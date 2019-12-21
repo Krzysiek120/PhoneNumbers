@@ -29,3 +29,4 @@ class BlogPost(models.Model):
     def __str__(self) -> str:
         """All django models should have this method."""
         return textwrap.wrap(self.title, _POST_TITLE_MAX_LENGTH // 4)[0]
+
